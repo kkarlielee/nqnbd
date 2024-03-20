@@ -1,25 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Import Question</title>
+    <title>( ͡° ͜ʖ ͡°)</title>
     <link rel="stylesheet" href="./public/css/style.css" />
-  </head>
-  <body>
+    <style>
+	    .toggle-button {
+	        background-color: #4caf50; /* Green */
+	        border: none;
+	        color: white;
+	        padding: 10px 20px;
+	        text-align: center;
+	        text-decoration: none;
+	        display: inline-block;
+	        font-size: 16px;
+	        margin: 10px 0; /* Increased margin for better spacing */
+	        cursor: pointer;
+	        border-radius: 5px; /* Rounded corners */
+	        transition: background-color 0.3s ease;
+	    }
+	
+	    .toggle-button:hover {
+	        background-color: #45a049; /* Darker green */
+	    }
+	
+	    /* Styling for hidden paragraphs */
+	    .hidden {
+	        display: none;
+	    }
+    </style>
+</head>
+<body>
     <div class="container">
-    <img id="banner" src="./public/images/pic1.jpeg" alt="banner" />
-      <h1 id="question-heading">NQN năm nay bao nhiêu tuổi?</h1>
-      <div class="buttons">
-        <button id="yes-button"><p>24</p></button>
-        <button id="no-button"><p>18</p></button>
-      </div>
-      <div class="message">
-        <h2 id="success-message">Chúc mừng sinh nhật tuổi 24 kaka :></h2>
-		<h4>From: <a class="creator">Your piggie ;)</a></h4>
-		<img src="./public/images/kal.jpeg" height="150" />
-      </div>
+        <img id="banner" src="./public/images/pic1.jpeg" alt="banner" />
+        <h1 id="question-heading">NQN năm nay bao nhiêu tuổi?</h1>
+        <div class="buttons">
+            <button id="yes-button"><p>24</p></button>
+            <button id="no-button"><p>18</p></button>
+        </div>
+        <div class="message">
+            <h2 id="success-message">Chúc mừng sinh nhật tuổi 24 kaka :></h2>
+            <h4>From: Your piggie ;)</a></h4>
+            <img src="./public/images/kal.jpeg" height="150" />
+			<p></p>
+			<button class="toggle-button">Tiếp này</button>
+	        <p class="hidden">Sinloi vì dạo này em bận wa, không có nhiều thời gian chuẩn bị lắm. Chỉ kịp làm thế này thoy =)).</p>
+	        <button class="toggle-button hidden">Nữa này</button>
+	        <p class="hidden">Hope u like this little gift :>. Dun worri, it did not take much time (as u can tell) =)). Em vẫn ổn.</p>
+	        <button class="toggle-button hidden">Hết chưa ta?</button>
+	        <p class="hidden">Happy birthday to u sweetie ପ(๑•ᴗ•๑)ଓ ♡ </p>
+			<button class="toggle-button hidden">Hết thật chưa ta?</button>
+	        <p class="hidden">Tuổi mới trẻ khoẻ nhiều tiền, để còn nuôi em nhé =)) </p>
+			<button class="toggle-button hidden">Thôi nốt cái này =))</button>
+		    <p class="hidden">Yêu anh nhiều nhiều. And thanks for being patient till now =)))</p>
+        </div>
+        <!-- Buttons to toggle paragraph visibility -->
+        
     </div>
     <script src="./public/js/script.js"></script>
-  </body>
+    <script>
+        // JavaScript to toggle paragraph visibility and show next button
+        var toggleButtons = document.querySelectorAll('.toggle-button');
+        toggleButtons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                var paragraphs = document.querySelectorAll('.hidden');
+                paragraphs[index].classList.toggle('hidden');
+                // Show the next button if available
+                if (index + 1 < toggleButtons.length) {
+                    toggleButtons[index + 1].style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
 </html>
