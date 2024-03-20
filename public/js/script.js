@@ -1,11 +1,11 @@
 const answers_no = [
         "18",
         "Chắc không?",
-        "Có chắc chắn không?",
+        "Chắc chắn không?",
         "Nghĩ lại đi?",
 		"Khong phải đâu",
 		"Sai rồi",
-        "Không nên chối bỏ sự thật",
+        "Khong nên chối bỏ sự thật",
 	    "Tính forever 18 hả?",
 		"Năm thứ mấy 18 tuổi rồi nhờ?",
         "2024 - 2000 = ??",
